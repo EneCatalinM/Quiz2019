@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="quiz__container">
+        <div class="quiz__header">
+          <h1 class="quiz__question"></h1>
+          <div class="quiz__count">
+            <p id="quiz__count"></p>
+          </div>
+          <div class="quiz__progressBarOuter">
+            <div class="quiz__progressBarInner"></div>
+          </div>
+          <p class="quiz__text">Pick an option below!</p>
+        </div>
+        <div class="quiz__body">
+          <ul class="quiz__choices">
+            <!-- dynamicaly with js -->
+          </ul>
+        </div>
+        <div class="quiz__footer">
+          <button class="quiz__next button">Next</button>
+          <button class="quiz__restart button">Restart</button>
+        </div>
+      </div>
+    </main>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>

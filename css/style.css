@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|PT+Serif:700");
+:root {
+  --main-font-color: #1a1a1a;
+  --main-bg-color: white;
+  --main-team-color: rgb(243, 168, 47);
+  --light-white: #f5f5f5;
+  --light-gray: #ccc;
+  --light-black: #282a39;
+  --container-width: 768px;
+  --font-body-stack: Raleway, Charcoal, sans-serif;
+  --font-heading-stack: "PT Serif", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+.button {
+  padding: 1rem 3.8rem;
+  text-transform: uppercase;
+  border: 1px solid var(--main-font-color);
+  background: transparent;
+  transition: 0.5s all ease;
+  outline: 0;
+  opacity: 0.9;
+  font-weight: bold;
+}
+.button:hover {
+  opacity: 1;
+  background: var(--light-black);
+  color: var(--light-white);
+}
+.quiz__container {
+  padding: 2rem 1.4rem;
+}
+.quiz__header {
+  text-align: center;
+}
+.quiz__question {
+  font-family: var(--font-heading-stack);
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  padding: 0.8rem 4rem;
+  color: var(--main-font-color);
+}
+.quiz__count {
+  font-family: var(--font-body-stack);
+  color: var(--light-black);
+  padding: 1rem;
+}
+.quiz__progressBarOuter {
+  max-width: 50%;
+  margin: 1rem auto;
+  background: var(--light-gray);
+  border-radius: 4px;
+}
+.quiz__progressBarInner {
+  background: var(--main-team-color);
+  height: 10px;
+  width: 0%;
+  border-radius: 4px;
+  border-right: 2px solid black;
+}
+.quiz__text {
+  font-family: var(--font-body-stack);
+  color: var(--light-gray);
+  font-size: 1.4rem;
+}
+.quiz__body {
+}
+.quiz__choices {
+  list-style-type: none;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.quiz__choice {
+  min-width: 300px;
+  border-radius: 4px;
+  display: block;
+  background: var(--light-white);
+  margin: 0.5rem auto;
+  font-family: var(--font-heading-stack);
+  letter-spacing: 1.2px;
+  font-size: 1rem;
+  transition: 1s all ease;
+}
+.quiz__label {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+.quiz__choice:hover {
+  background: rgba(243, 155, 109, 0.2);
+}
+.quiz__choices input {
+  opacity: 0;
+}
+.quiz__choices input:checked + label {
+  color: var(--main-team-color);
+}
+.quiz__choices input:checked + label i {
+  background-image: url("../images/verified.svg");
+}
+
+.quiz__choices label i {
+  background: url("../images/outline.svg");
+  background-size: 40px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  left: -2px;
+  margin-right: 10px;
+}
+
+.quiz__footer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
